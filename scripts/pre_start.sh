@@ -62,12 +62,13 @@ else
     export GRADIO_SERVER_NAME=${LLAVA_HOST}
     export GRADIO_SERVER_PORT="3001"
     export HF_HOME="/workspace"
+    export MODEL="liuhaotian/llava-v1.6-vicuna-13b"
 
     if [[ ${MODEL} ]]
     then
       export LLAVA_MODEL=${MODEL}
     else
-      export LLAVA_MODEL="liuhaotian/llava-v1.6-mistral-7b"
+      export LLAVA_MODEL="liuhaotian/llava-v1.6-vicuna-13b"
     fi
 
     echo "Starting LLaVA using model: ${LLAVA_MODEL}"

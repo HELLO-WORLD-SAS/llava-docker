@@ -43,8 +43,8 @@ target "default" {
         INDEX_URL = "https://download.pytorch.org/whl/cu${CU_VERSION}"
         TORCH_VERSION = "${TORCH_VERSION}+cu${CU_VERSION}"
         XFORMERS_VERSION = "0.0.23.post1+cu${CU_VERSION}"
-        LLAVA_COMMIT = "0b3b478e7cc8e55d7ca312ecd2ff5a90690d08d5"
-        LLAVA_MODEL = "liuhaotian/llava-v1.6-mistral-7b"
+        LLAVA_COMMIT = "22422b4c3a3ef1ba52aca074cc9021216877ce5d"
+        LLAVA_MODEL = "liuhaotian/llava-v1.6-vicuna-13b"
         VENV_PATH = "/workspace/venvs/${APP}"
     }
 }

@@ -22,7 +22,7 @@ RUN source /venv/bin/activate && \
 
 # Clone the git repo of LLaVA and set version
 ARG LLAVA_COMMIT
-RUN git clone https://github.com/ashleykleynhans/LLaVA.git && \
+RUN git clone https://github.com/HELLO-WORLD-SAS/LLaVA.git && \
     cd /LLaVA && \
     git checkout ${LLAVA_COMMIT}
 
@@ -36,6 +36,13 @@ RUN source /venv/bin/activate && \
     pip3 install flash-attn --no-build-isolation && \
     pip3 install transformers==4.37.2 && \
     pip3 install protobuf && \
+    deactivate
+
+# Install OpenAI API libraries
+RUN source /venv/bin/activate && \
+    pip3 install tiktoken && \
+    pip3 install fschat && \
+    pip3 install pydantic-settings && \
     deactivate
 
 # Download the default model

@@ -62,7 +62,6 @@ else
     export GRADIO_SERVER_NAME=${LLAVA_HOST}
     export GRADIO_SERVER_PORT="3001"
     export HF_HOME="/workspace"
-    export MODEL="liuhaotian/llava-v1.6-vicuna-13b"
     export ENABLE_OPENAI_API="true"
 
     if [[ ${MODEL} ]]
